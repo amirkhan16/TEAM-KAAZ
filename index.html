@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TruthInn — Fake News Detector</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+
+    <a href="#" class="logo">
+
+      <span class="logo-icon"></span>
+
+      TruthInn
+
+    </a>
+
+    <nav class="nav-links">
+
+      <a href="#scanner" class="nav-button pricing">
+        ♔ Pricing
+      </a>
+
+      <a href="#scanner" class="nav-button">
+        Sign In
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="badge">
+      ◈ AI DIGITAL FORENSICS
+    </div>
+
+    <h1>
+      Detect
+      <span class="cyan">
+        Fake News
+      </span>
+      <br>
+      & AI Content
+    </h1>
+
+    <p class="hero-description">
+
+      Scan headlines, articles and digital content
+      through a cybersecurity-inspired verification
+      engine designed to surface suspicious patterns
+      and credibility signals.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a
+        href="#scanner"
+        class="button primary-button"
+      >
+        ⌁ Analyze Now
+      </a>
+
+      <a
+        href="#how"
+        class="button secondary-button"
+      >
+        ▣ How It Works
+      </a>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>98%</strong>
+        <span>DEMO ACCURACY</span>
+      </div>
+
+      <div class="stat">
+        <strong>1M+</strong>
+        <span>SCANS</span>
+      </div>
+
+      <div class="stat">
+        <strong>&lt;2s</strong>
+        <span>ANALYSIS</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       HOW IT WORKS
+  ========================== -->
+
+  <section id="how">
+
+    <div class="section-heading">
+
+      <h2>
+        How
+        <span>Verification</span>
+        Works
+      </h2>
+
+      <p>
+        TruthInn combines multiple analysis layers
+        to inspect content instead of relying on
+        a single signal.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="card-icon">
+          ◉
+        </div>
+
+        <h3>
+          Pattern Analysis
+        </h3>
+
+        <p>
+          Checks sensational wording,
+          manipulation patterns,
+          unusual claims and
+          suspicious language signals.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          ϟ
+        </div>
+
+        <h3>
+          AI Content Detection
+        </h3>
+
+        <p>
+          Looks for writing and media
+          characteristics that may indicate
+          synthetic or manipulated content.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          ▤
+        </div>
+
+        <h3>
+          Source Verification
+        </h3>
+
+        <p>
+          Cross-reference claims against
+          trusted sources when a verification
+          backend is connected.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SCANNER
+  ========================== -->
+
+  <section id="scanner">
+
+    <div class="scanner">
+
+      <div class="scanner-label">
+        ◈ AI FORENSIC SCANNER
+      </div>
+
+      <h2>
+        Analyze Content
+      </h2>
+
+
+      <!-- TABS -->
+
+      <div class="tabs">
+
+        <button
+          class="tab active"
+          data-mode="text"
+        >
+          ▣ Text / News
+        </button>
+
+        <button
+          class="tab"
+          data-mode="image"
+        >
+          ▧ Image
+        </button>
+
+        <button
+          class="tab"
+          data-mode="video"
+        >
+          ▣ Video
+        </button>
+
+        <button
+          class="tab"
+          data-mode="url"
+        >
+          ↗ URL
+        </button>
+
+      </div>
+
+
+      <!-- TEXT INPUT -->
+
+      <div class="input-area">
+
+        <textarea
+          id="newsInput"
+          maxlength="3000"
+          placeholder="Paste a news article, headline, or any text you want to verify..."
+        ></textarea>
+
+        <span
+          class="counter"
+          id="counter"
+        >
+          0 chars
+        </span>
+
+      </div>
+
+
+      <!-- BUTTON -->
+
+      <div class="scan-row">
+
+        <button
+          class="scan-button"
+          id="scanButton"
+        >
+          ⌁ Analyze Text
+        </button>
+
+        <button
+          class="clear-button"
+          id="clearButton"
+        >
+          ⌫
+        </button>
+
+      </div>
+
+
+      <!-- RESULT -->
+
+      <div
+        class="result"
+        id="result"
+      >
+
+        <div class="result-header">
+
+          <div>
+
+            <div class="verdict">
+              ● ANALYSIS COMPLETE
+            </div>
+
+            <div
+              style="
+                color:#7d929e;
+                font-size:12px;
+                margin-top:6px;
+              "
+            >
+              Credibility signal
+            </div>
+
+          </div>
+
+          <div
+            class="score"
+            id="score"
+          >
+            —
+          </div>
+
+        </div>
+
+
+        <div class="progress">
+
+          <div
+            class="progress-bar"
+            id="progressBar"
+          ></div>
+
+        </div>
+
+
+        <div class="checks">
+
+          <div class="check">
+            ✓ Language patterns scanned
+          </div>
+
+          <div class="check">
+            ✓ Claim structure inspected
+          </div>
+
+          <div class="check">
+            ✓ Source signals checked
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-links">
+
+      <a href="#scanner">
+        Pricing
+      </a>
+
+      <a href="#">
+        Privacy Policy
+      </a>
+
+      <a href="#">
+        Terms & Conditions
+      </a>
+
+      <a href="#">
+        Refund Policy
+      </a>
+
+    </div>
+
+    TruthInn © 2026 — Digital Truth Intelligence
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+<script src="script .js"></script>
+</body>
+</html>
